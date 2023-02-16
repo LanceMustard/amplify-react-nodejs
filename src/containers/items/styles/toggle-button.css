@@ -1,0 +1,15 @@
+.toggle-button {
+    border: none;
+    padding: 8px;
+    margin: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 6px;
+}
+
+.toggle-button-on {
+    background-color: steelblue;
+    color: white;
+}

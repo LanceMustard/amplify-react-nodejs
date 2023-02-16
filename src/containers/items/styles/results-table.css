@@ -1,0 +1,11 @@
+.results-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.results-table th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+.results-table tr:nth-child(even) {background-color: #f2f2f2;}

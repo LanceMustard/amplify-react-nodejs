@@ -1,0 +1,8 @@
+.item-search {
+    padding: 32px
+}
+
+.item-search > div {
+    padding-top: 12px;
+    padding-bottom: 12px;;
+}
