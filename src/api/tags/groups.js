@@ -1,5 +1,1 @@
-
-export const getGroups = () => {
-    return [{ name: "Types" }, { name: "Uses"} ]
-
-}
+export const getGroups = () => [{ name: 'Types' }, { name: 'Uses' }];

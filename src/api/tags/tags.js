@@ -1,6 +1,3 @@
-import { tags } from '../mockData'
+import { tags } from '../mockData';
 
-export const getTags = (group) => {
-    return tags.filter(x => x.group === group)
-
-}
+export const getTags = (group) => tags.filter((x) => x.group === group);

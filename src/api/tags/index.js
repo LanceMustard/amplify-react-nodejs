@@ -1,1 +1,1 @@
-export { getTags} from './tags'
+export { getTags } from './tags';
