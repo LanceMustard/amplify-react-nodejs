@@ -86,7 +86,7 @@ export function ItemSearch() {
 
   return (
     <div className="item-search">
-      <Header title="Plant Database" />
+      <Header title="Plant Database for Cadi" />
       <SearchInput
         onChange={handeFilterSearchByName}
       />
