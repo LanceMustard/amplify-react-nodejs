@@ -7,6 +7,16 @@ import { SearchFooter } from './SearchFooter';
 // import { getGroups } from '../../api/tags/groups';
 import './styles/item-search.css';
 import { Tag, SearchResultItem } from './models';
+import "@aws-amplify/ui-react/styles.css";
+import {
+  withAuthenticator,
+  Button,
+  Heading,
+  Image,
+  View,
+  Card,
+} from "@aws-amplify/ui-react";
+
 
 const mockGroups = [
   { name: 'Types' },
@@ -35,7 +45,7 @@ interface ItemFilter {
   search: string
 }
 
-export function ItemSearch() {
+function ItemSearch() {
   const [groups] = useState(mockGroups);
   const [tags] = useState(mockTags);
   const [searchResults, setSearchResults] = useState(mockResults);
@@ -86,7 +96,7 @@ export function ItemSearch() {
 
   return (
     <div className="item-search">
-      <Header title="Plant Database for Cadi" />
+      <Header title="Plant Database" />
       <SearchInput
         onChange={handeFilterSearchByName}
       />
@@ -103,3 +113,5 @@ export function ItemSearch() {
 
   );
 }
+
+export default withAuthenticator(ItemSearch);
