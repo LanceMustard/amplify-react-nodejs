@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Header } from './Header';
 import { SearchInput } from './SearchInput';
 import { TagsGroup } from './TagsGroup';
 import { SearchResults } from './SearchResults';
@@ -95,7 +94,6 @@ function ItemSearch() {
 
   return (
     <div className="item-search">
-      <Header title="Plant Database" />
       <SearchInput
         onChange={handeFilterSearchByName}
       />
@@ -113,5 +111,5 @@ function ItemSearch() {
   );
 }
 
-// export default withAuthenticator(ItemSearch);
-export default ItemSearch;
+export default withAuthenticator(ItemSearch);
+// export default ItemSearch;

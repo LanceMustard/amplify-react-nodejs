@@ -1,0 +1,24 @@
+type ItemTag @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Tags: [Tag] @manyToMany(relationName: "ItemTagTag")
+  ItemProfiles: [ItemProfile] @manyToMany(relationName: "ItemTagItemProfile")
+}
+
+type Tag @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Name: String
+  groupID: ID! @index(name: "byGroup")
+  itemtags: [ItemTag] @manyToMany(relationName: "ItemTagTag")
+}
+
+type Group @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Name: String
+  Tags: [Tag] @hasMany(indexName: "byGroup", fields: ["id"])
+}
+
+type ItemProfile @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Name: String
+  itemtags: [ItemTag] @manyToMany(relationName: "ItemTagItemProfile")
+}

@@ -27,7 +27,7 @@ export function SearchInput(props: SearchInputProps) {
         placeholder="Search..."
         onChange={handleChange}
       />
-      <button><i className="fa fa-search" /></button>
+      <button className='search-button'><i className="fa fa-search" /></button>
     </div>
   );
 }
