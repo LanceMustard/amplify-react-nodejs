@@ -84,7 +84,6 @@ function ItemSearch() {
     );
   };
 
-
   function isResultInSelectedTags(result: SearchResultItem, selectedTags: string[]): boolean {
     if (selectedTags.length === 0) return true;
     return selectedTags.every((selectedTag) => result.tags.some(tag =>  tag.name === selectedTag));
@@ -114,4 +113,5 @@ function ItemSearch() {
   );
 }
 
-export default withAuthenticator(ItemSearch);
+// export default withAuthenticator(ItemSearch);
+export default ItemSearch;
